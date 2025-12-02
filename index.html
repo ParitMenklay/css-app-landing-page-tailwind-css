@@ -7,7 +7,39 @@
     <title>Acme App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!-- Start Coding Here -->
+  <body class="m-0 bg-[#F6F6FB] px-6 py-6">
+    <nav class="border border-gray-200 bg-white rounded-[99px]">
+      <div class="flex w-full items-center justify-between px-20 py-3">
+        <a href="#" class="flex items-center gap-3">
+          <img src="./logo/logo.png" alt="Acme App logo" class="h-10 w-auto" />
+        </a>
+        <div class="flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="#" class="transition hover:text-gray-900">Home</a>
+          <a href="#" class="transition hover:text-gray-900">Features</a>
+          <a href="#" class="transition hover:text-gray-900">Pricing</a>
+          <a href="#" class="transition hover:text-gray-900">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <section class="flex w-full items-center justify-center py-24">
+      <div class="max-w-4xl text-center">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[#563AFF1A] px-6 py-2 text-xs font-medium text-[#5E44FF]">
+          <span>🌈</span>
+          <span>Acme Productivity App</span>
+        </div>
+        <h1 class="mt-10 text-5xl font-extrabold tracking-tight text-slate-900 md:text-6xl">
+          Boost Your
+          <span class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+            Productivity
+          </span>
+        </h1>
+        <p class="mt-6 text-lg text-slate-500">
+          Streamline your workflow with our all-in-one productivity app.
+        </p>
+        <button class="mt-10 inline-flex items-center justify-center rounded-2xl bg-black px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F6F6FB]">
+          Start Free Trial
+        </button>
+      </div>
+    </section>
   </body>
 </html>
