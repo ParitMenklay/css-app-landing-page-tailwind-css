@@ -8,49 +8,117 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="m-0 bg-[#F6F6FB] px-6 py-6">
-    <nav class="border border-gray-200 bg-white rounded-[99px]">
-      <div class="flex w-full items-center justify-between px-20 py-3">
+    <nav class="w-full border border-gray-200 bg-white rounded-[99px]">
+      <div class="flex w-full items-center justify-between px-6 py-3 md:px-20">
         <a href="#" class="flex items-center gap-3">
           <img src="./logo/logo.png" alt="Acme App logo" class="h-10 w-auto" />
         </a>
-        <div class="flex items-center gap-6 text-sm font-medium text-gray-600 ">
-          <a href="#" class="transition hover:text-[#5E44FF] hover:underline">Home</a>
-          <a href="#" class="transition hover:text-[#5E44FF] hover:underline">Features</a>
-          <a href="#" class="transition hover:text-[#5E44FF] hover:underline">Pricing</a>
-          <a href="#" class="transition hover:text-[#5E44FF] hover:underline">Contact</a>
+        <!-- desktop menu -->
+        <div
+          class="hidden items-center gap-6 text-sm font-medium text-gray-600 md:flex"
+        >
+          <a href="#" class="transition hover:text-[#5E44FF] hover:underline"
+            >Home</a
+          >
+          <a href="#" class="transition hover:text-[#5E44FF] hover:underline"
+            >Features</a
+          >
+          <a href="#" class="transition hover:text-[#5E44FF] hover:underline"
+            >Pricing</a
+          >
+          <a href="#" class="transition hover:text-[#5E44FF] hover:underline"
+            >Contact</a
+          >
         </div>
+        <!-- mobile hamburger -->
+        <button
+          id="mobile-menu-button"
+          class="group inline-flex items-center justify-center p-2 text-gray-600 transition-colors hover:text-[#5E44FF] md:hidden"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation menu</span>
+          <span class="flex flex-col gap-1.5">
+            <span
+              class="block h-0.5 w-5 rounded bg-gray-600 transition-colors group-hover:bg-[#5E44FF]"
+            ></span>
+            <span
+              class="block h-0.5 w-5 rounded bg-gray-600 transition-colors group-hover:bg-[#5E44FF]"
+            ></span>
+            <span
+              class="block h-0.5 w-5 rounded bg-gray-600 transition-colors group-hover:bg-[#5E44FF]"
+            ></span>
+          </span>
+        </button>
       </div>
     </nav>
+    <!-- mobile dropdown panel -->
+    <section
+      id="mobile-menu"
+      class="mt-3 w-full rounded-[32px] border border-[#5E44FF33] bg-white px-8 py-10 text-center text-sm font-medium text-gray-600 shadow-lg shadow-[#5E44FF33] md:hidden"
+      hidden
+    >
+      <a href="#" class="block py-2 hover:text-[#5E44FF] hover:underline"
+        >Home</a
+      >
+      <a href="#" class="block py-4 hover:text-[#5E44FF] hover:underline"
+        >Features</a
+      >
+      <a href="#" class="block py-4 hover:text-[#5E44FF] hover:underline"
+        >Pricing</a
+      >
+      <a href="#" class="block py-4 hover:text-[#5E44FF] hover:underline"
+        >Contact</a
+      >
+    </section>
+
     <section class="flex w-full items-center justify-center py-24">
       <div class="max-w-4xl text-center">
-        <div class="inline-flex items-center gap-2 rounded-full bg-[#563AFF1A] px-6 py-2 text-xs font-medium text-[#5E44FF]">
+        <div
+          class="inline-flex items-center gap-2 rounded-full bg-[#563AFF1A] px-6 py-2 text-xs font-medium text-[#5E44FF]"
+        >
           <span>🌈</span>
           <span>Acme Productivity App</span>
         </div>
-        <h1 class="mt-10 text-5xl font-extrabold tracking-tight text-slate-900 md:text-6xl">
+        <h1
+          class="mt-10 text-5xl font-extrabold tracking-tight text-slate-900 md:text-6xl"
+        >
           Boost Your
-          <span class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+          <span
+            class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"
+          >
             Productivity
           </span>
         </h1>
         <p class="mt-6 text-lg text-slate-500">
           Streamline your workflow with our all-in-one productivity app.
         </p>
-        <button class="mt-10 inline-flex w-[187px] items-center justify-center rounded-2xl bg-[#1A1A2C] px-9 py-4 text-sm font-semibold text-white shadow-sm transition hover:bg-[#5F5F76] focus:bg-[#35354D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5F5F76] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F5F76]">
+        <button
+          class="mt-10 inline-flex w-[187px] items-center justify-center rounded-2xl bg-[#1A1A2C] px-9 py-4 text-sm font-semibold text-white shadow-sm transition hover:bg-[#5F5F76] focus:bg-[#35354D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5F5F76] focus-visible:ring-offset-2 focus-visible:ring-offset-[#5F5F76]"
+        >
           Start Free Trial
         </button>
       </div>
     </section>
 
     <!-- Section 2: Features -->
-  <section id="features" class="flex flex-col justify-start items-center">
-  <div class="max-w-[1201px] h-[272px] mx-auto gap-10 flex flex-row justify-between items-center">
-
-      <!-- กล่อง 1 -->
-      <div class="w-[387px] h-full rounded-[24px] bg-[#D7E5F6] p-[28px] flex flex-col gap-10">
+    <section id="features" class="flex flex-col justify-start items-center">
+      <div
+        class="max-w-[1201px] h-[272px] mx-auto gap-10 flex flex-row justify-between items-center"
+      >
+        <!-- กล่อง 1 -->
+        <div
+          class="w-[387px] h-full rounded-[24px] bg-[#D7E5F6] p-[28px] flex flex-col gap-10"
+        >
           <div
-            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]">
-            <img src="./logo/icon1.png" alt="Streamlined workflows icon" class="h-[28px] w-[28px]" />
+            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]"
+          >
+            <img
+              src="./logo/icon1.png"
+              alt="Streamlined workflows icon"
+              class="h-[28px] w-[28px]"
+            />
           </div>
           <div class="flex h-[116px] w-[331px] flex-col gap-3">
             <h3 class="text-2xl leading-8 font-semibold text-black">
@@ -63,11 +131,18 @@
           </div>
         </div>
 
-      <!-- กล่อง 2 -->
-      <div class="w-[387px] h-full rounded-[24px] bg-[#D8E0FC] p-[28px] flex flex-col gap-10">
+        <!-- กล่อง 2 -->
+        <div
+          class="w-[387px] h-full rounded-[24px] bg-[#D8E0FC] p-[28px] flex flex-col gap-10"
+        >
           <div
-            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]">
-            <img src="./logo/icon2.png" alt="Fast performance icon" class="h-[28px] w-[28px]" />
+            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]"
+          >
+            <img
+              src="./logo/icon2.png"
+              alt="Fast performance icon"
+              class="h-[28px] w-[28px]"
+            />
           </div>
           <div class="flex h-[116px] w-[331px] flex-col gap-3">
             <h3 class="text-2xl leading-8 font-semibold text-black">
@@ -80,11 +155,18 @@
           </div>
         </div>
 
-      <!-- กล่อง 3 -->
-      <div class="w-[387px] h-full rounded-[24px] bg-[#E8DCF6] p-[28px] flex flex-col gap-10">
+        <!-- กล่อง 3 -->
+        <div
+          class="w-[387px] h-full rounded-[24px] bg-[#E8DCF6] p-[28px] flex flex-col gap-10"
+        >
           <div
-            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]">
-            <img src="./logo/icon3.png" alt="Intuitive interface icon" class="h-[28px] w-[28px]" />
+            class="inline-flex h-[60px] w-[60px] items-center justify-center rounded-[16px] bg-[#FFFFFF99]"
+          >
+            <img
+              src="./logo/icon3.png"
+              alt="Intuitive interface icon"
+              class="h-[28px] w-[28px]"
+            />
           </div>
           <div class="flex h-[116px] w-[331px] flex-col gap-3">
             <h3 class="text-2xl leading-8 font-semibold text-black">
@@ -96,9 +178,23 @@
             </p>
           </div>
         </div>
-
-    </div>
-  </section>
-
+      </div>
+    </section>
+    <script>
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener("click", () => {
+          const isHidden = mobileMenu.hasAttribute("hidden");
+          if (isHidden) {
+            mobileMenu.removeAttribute("hidden");
+            menuButton.setAttribute("aria-expanded", "true");
+          } else {
+            mobileMenu.setAttribute("hidden", "");
+            menuButton.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    </script>
   </body>
 </html>
